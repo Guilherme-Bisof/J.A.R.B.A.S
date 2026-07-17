@@ -1,0 +1,214 @@
+TEXTO DE TESTE — INTRODUÇÃO À FÍSICA
+
+A Física é a ciência que estuda os fenômenos naturais, procurando compreender as leis que descrevem o comportamento da matéria, da energia, do espaço e do tempo. Ela está presente em situações simples do cotidiano, como o movimento de um carro, a queda de um objeto, o funcionamento de uma lâmpada e a propagação do som.
+
+1. MOVIMENTO E VELOCIDADE
+
+Um corpo está em movimento quando sua posição muda em relação a um referencial. Um passageiro sentado dentro de um ônibus está parado em relação ao banco, mas está em movimento em relação a uma pessoa que observa o ônibus da calçada.
+
+A velocidade média é calculada pela razão entre o deslocamento e o intervalo de tempo:
+
+v = Δs / Δt
+
+Onde:
+v = velocidade média
+Δs = variação da posição
+Δt = intervalo de tempo
+
+Exemplo:
+Um carro percorre 120 quilômetros em 2 horas.
+
+v = 120 / 2
+v = 60 km/h
+
+Isso significa que a velocidade média do carro foi de 60 quilômetros por hora.
+
+2. ACELERAÇÃO
+
+A aceleração representa a variação da velocidade ao longo do tempo.
+
+a = Δv / Δt
+
+Onde:
+a = aceleração
+Δv = variação da velocidade
+Δt = intervalo de tempo
+
+Exemplo:
+Um automóvel aumenta sua velocidade de 10 m/s para 30 m/s em 5 segundos.
+
+a = (30 - 10) / 5
+a = 4 m/s²
+
+Portanto, a aceleração média foi de 4 metros por segundo ao quadrado.
+
+3. LEIS DE NEWTON
+
+Primeira Lei de Newton — Lei da Inércia
+
+Um corpo tende a permanecer em repouso ou em movimento retilíneo uniforme, a menos que uma força resultante atue sobre ele.
+
+Quando um ônibus freia de forma brusca, os passageiros tendem a continuar em movimento para a frente. Isso acontece devido à inércia.
+
+Segunda Lei de Newton
+
+A força resultante aplicada a um corpo é igual ao produto da massa pela aceleração.
+
+F = m × a
+
+Onde:
+F = força, medida em newtons
+m = massa, medida em quilogramas
+a = aceleração, medida em metros por segundo ao quadrado
+
+Exemplo:
+Uma força atua sobre um objeto de 10 kg e produz uma aceleração de 3 m/s².
+
+F = 10 × 3
+F = 30 N
+
+Terceira Lei de Newton — Ação e Reação
+
+Para toda ação existe uma reação de mesma intensidade e direção, mas em sentido contrário.
+
+Quando uma pessoa empurra uma parede, a parede também exerce uma força sobre a pessoa.
+
+4. ENERGIA
+
+Energia é a capacidade de realizar trabalho ou provocar transformações.
+
+A energia cinética está associada ao movimento de um corpo:
+
+Ec = (m × v²) / 2
+
+Onde:
+Ec = energia cinética
+m = massa
+v = velocidade
+
+Exemplo:
+Um objeto de 2 kg se move com velocidade de 5 m/s.
+
+Ec = (2 × 25) / 2
+Ec = 25 J
+
+A energia potencial gravitacional está associada à altura de um corpo:
+
+Ep = m × g × h
+
+Onde:
+Ep = energia potencial gravitacional
+m = massa
+g = aceleração da gravidade
+h = altura
+
+Considerando g = 10 m/s², um objeto de 3 kg colocado a 4 metros de altura possui:
+
+Ep = 3 × 10 × 4
+Ep = 120 J
+
+5. CALOR E TEMPERATURA
+
+Temperatura é uma medida relacionada ao grau de agitação das partículas de um corpo.
+
+Calor é a energia térmica transferida de um corpo mais quente para outro mais frio.
+
+Dois objetos podem ter a mesma temperatura, mas armazenar quantidades diferentes de energia térmica. Uma panela cheia de água e um copo de água podem estar a 80 graus Celsius, mas a panela possui uma quantidade maior de energia térmica devido à maior quantidade de matéria.
+
+6. ELETRICIDADE
+
+A corrente elétrica é o movimento ordenado de cargas elétricas.
+
+A intensidade da corrente elétrica pode ser calculada por:
+
+i = Q / t
+
+Onde:
+i = corrente elétrica
+Q = quantidade de carga elétrica
+t = tempo
+
+A Lei de Ohm relaciona tensão, resistência e corrente elétrica:
+
+U = R × i
+
+Onde:
+U = tensão elétrica
+R = resistência elétrica
+i = corrente elétrica
+
+Exemplo:
+Um resistor de 20 ohms é ligado a uma tensão de 100 volts.
+
+100 = 20 × i
+i = 5 A
+
+A corrente elétrica será de 5 amperes.
+
+7. ONDAS
+
+Uma onda é uma perturbação que transporta energia sem transportar matéria de forma permanente.
+
+O som é uma onda mecânica e precisa de um meio material para se propagar. Por isso, o som não se propaga no vácuo.
+
+A luz é uma onda eletromagnética e pode se propagar no vácuo.
+
+A velocidade de uma onda pode ser calculada por:
+
+v = λ × f
+
+Onde:
+v = velocidade da onda
+λ = comprimento de onda
+f = frequência
+
+Exemplo:
+Uma onda possui frequência de 50 Hz e comprimento de onda de 4 metros.
+
+v = 4 × 50
+v = 200 m/s
+
+8. GRAVITAÇÃO
+
+Todos os corpos que possuem massa exercem atração gravitacional.
+
+Na superfície da Terra, os objetos caem com aceleração aproximada de 9,8 m/s². Em muitos exercícios escolares, utiliza-se o valor aproximado de 10 m/s².
+
+A massa de um corpo permanece a mesma em qualquer lugar, mas o peso pode variar conforme a gravidade.
+
+P = m × g
+
+Uma pessoa com massa de 60 kg possui, na Terra:
+
+P = 60 × 10
+P = 600 N
+
+Na Lua, onde a gravidade é menor, sua massa continuaria sendo 60 kg, mas seu peso seria menor.
+
+9. QUESTÕES PARA TESTE
+
+1. O que é um referencial?
+2. Qual é a diferença entre velocidade e aceleração?
+3. Um carro percorre 300 km em 5 horas. Qual é sua velocidade média?
+4. Qual das Leis de Newton explica o movimento do corpo para a frente quando um ônibus freia?
+5. Calcule a força resultante sobre um objeto de 8 kg com aceleração de 2 m/s².
+6. Qual é a diferença entre energia cinética e energia potencial?
+7. Um objeto de 5 kg está a 10 metros de altura. Considerando g = 10 m/s², qual é sua energia potencial gravitacional?
+8. Qual é a diferença entre calor e temperatura?
+9. Por que o som não se propaga no vácuo?
+10. Uma onda possui frequência de 20 Hz e comprimento de onda de 3 metros. Qual é sua velocidade?
+11. Qual é a diferença entre massa e peso?
+12. Explique a Terceira Lei de Newton usando um exemplo do cotidiano.
+
+10. DESAFIO DE INTERPRETAÇÃO
+
+Um ciclista parte do repouso e atinge a velocidade de 12 m/s em 6 segundos. Sua massa, juntamente com a bicicleta, é de 80 kg.
+
+Responda:
+
+a) Qual foi a aceleração média do ciclista?
+b) Qual foi a força resultante aplicada?
+c) Qual é a energia cinética do ciclista ao atingir 12 m/s?
+d) Explique quais formas de energia estão envolvidas no movimento.
+
+FIM DO TEXTO

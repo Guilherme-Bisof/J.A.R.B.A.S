@@ -1,0 +1,203 @@
+TEXTO DE TESTE — ELETROMAGNETISMO E FÍSICA MODERNA
+
+A Física moderna surgiu principalmente no início do século XX, quando alguns fenômenos não podiam mais ser explicados apenas pelas ideias da Física clássica. Entre os principais temas estão o eletromagnetismo, a relatividade, a física quântica e a estrutura da matéria.
+
+1. CARGA ELÉTRICA
+
+A carga elétrica é uma propriedade da matéria. Existem dois tipos de carga: positiva e negativa. Cargas de mesmo sinal se repelem, enquanto cargas de sinais opostos se atraem.
+
+A unidade de carga elétrica no Sistema Internacional é o coulomb, representado pela letra C. O elétron possui carga negativa, enquanto o próton possui carga positiva.
+
+2. LEI DE COULOMB
+
+A força elétrica entre duas cargas puntiformes pode ser calculada pela Lei de Coulomb:
+
+F = k × |q1 × q2| / d²
+
+Onde:
+F = força elétrica;
+k = constante eletrostática;
+q1 e q2 = valores das cargas;
+d = distância entre as cargas.
+
+No vácuo:
+k ≈ 9 × 10⁹ N·m²/C²
+
+Exemplo:
+Duas cargas de 2 × 10⁻⁶ C e 3 × 10⁻⁶ C estão separadas por 0,5 m.
+
+F = 9 × 10⁹ × (2 × 10⁻⁶ × 3 × 10⁻⁶) / 0,5²
+F = 0,216 N
+
+3. CAMPO ELÉTRICO
+
+Uma carga elétrica cria ao seu redor uma região chamada campo elétrico.
+
+E = F / q
+
+Também pode ser calculado por:
+
+E = k × |Q| / d²
+
+A unidade de campo elétrico é N/C.
+
+4. POTENCIAL ELÉTRICO
+
+O potencial elétrico indica a quantidade de energia potencial elétrica por unidade de carga.
+
+V = Ep / q
+
+A unidade de potencial elétrico é o volt. A diferença de potencial, também chamada tensão elétrica, é responsável pelo movimento ordenado das cargas em um circuito.
+
+5. CORRENTE ELÉTRICA
+
+A corrente elétrica é o movimento ordenado de cargas elétricas.
+
+i = Q / Δt
+
+Exemplo:
+Uma carga de 20 coulombs atravessa um fio em 4 segundos.
+
+i = 20 / 4
+i = 5 A
+
+6. RESISTÊNCIA ELÉTRICA
+
+A resistência elétrica representa a dificuldade que um material oferece à passagem da corrente elétrica.
+
+U = R × i
+
+Exemplo:
+Um resistor de 10 ohms é atravessado por uma corrente de 3 amperes.
+
+U = 10 × 3
+U = 30 V
+
+7. POTÊNCIA ELÉTRICA
+
+A potência elétrica indica a rapidez com que a energia elétrica é transformada.
+
+P = U × i
+P = R × i²
+P = U² / R
+
+Exemplo:
+Um aparelho ligado a 220 V é percorrido por uma corrente de 5 A.
+
+P = 220 × 5
+P = 1100 W
+
+8. CAMPO MAGNÉTICO
+
+Ímãs possuem polo norte e polo sul. Polos iguais se repelem e polos opostos se atraem. Uma corrente elétrica produz um campo magnético ao redor do fio. Esse princípio é utilizado em motores, transformadores e alto-falantes.
+
+9. INDUÇÃO ELETROMAGNÉTICA
+
+A indução eletromagnética ocorre quando uma variação do campo magnético produz corrente elétrica em um condutor. Esse fenômeno foi estudado por Michael Faraday.
+
+Geradores elétricos funcionam com base na indução eletromagnética, convertendo energia mecânica em energia elétrica.
+
+10. ONDAS ELETROMAGNÉTICAS
+
+Ondas eletromagnéticas são formadas pela oscilação de campos elétricos e magnéticos. Elas podem se propagar no vácuo.
+
+Exemplos:
+- ondas de rádio;
+- micro-ondas;
+- luz visível;
+- infravermelho;
+- ultravioleta;
+- raios X;
+- raios gama.
+
+No vácuo, propagam-se com velocidade aproximada de:
+
+c = 3 × 10⁸ m/s
+
+11. RELATIVIDADE
+
+A Teoria da Relatividade Especial foi proposta por Albert Einstein em 1905. Um de seus princípios afirma que a velocidade da luz no vácuo é a mesma para todos os observadores inerciais.
+
+E = m × c²
+
+Essa equação mostra que massa e energia são grandezas equivalentes.
+
+12. DILATAÇÃO DO TEMPO
+
+Segundo a relatividade, o tempo pode passar de forma diferente para observadores em velocidades muito diferentes. Quanto maior a velocidade de um objeto, mais lentamente o tempo passa para ele do ponto de vista de outro observador.
+
+13. FÍSICA QUÂNTICA
+
+A física quântica estuda fenômenos em escalas muito pequenas, como átomos, elétrons e partículas subatômicas.
+
+A energia de um fóton pode ser calculada por:
+
+E = h × f
+
+Quanto maior a frequência da radiação, maior a energia de seus fótons.
+
+14. EFEITO FOTOELÉTRICO
+
+O efeito fotoelétrico ocorre quando a luz atinge a superfície de um material e provoca a emissão de elétrons. Esse fenômeno ajudou a demonstrar que a luz também pode se comportar como partícula.
+
+15. DUALIDADE ONDA-PARTÍCULA
+
+Partículas como elétrons podem apresentar comportamento de partícula e de onda. A luz também apresenta essa dualidade.
+
+16. ESTRUTURA DO ÁTOMO
+
+O átomo é formado por prótons, nêutrons e elétrons. Prótons e nêutrons ficam concentrados no núcleo. Os elétrons ocupam regiões ao redor do núcleo chamadas orbitais.
+
+17. RADIOATIVIDADE
+
+A radioatividade ocorre quando núcleos atômicos instáveis emitem partículas ou radiação.
+
+Principais tipos:
+- alfa;
+- beta;
+- gama.
+
+A radiação gama possui alto poder de penetração.
+
+18. FISSÃO E FUSÃO NUCLEAR
+
+A fissão nuclear ocorre quando um núcleo pesado se divide em núcleos menores, liberando energia. Esse processo é utilizado em usinas nucleares.
+
+A fusão nuclear ocorre quando núcleos leves se unem, formando um núcleo mais pesado. A fusão é o processo que produz energia no Sol e em outras estrelas.
+
+19. QUESTÕES PARA TESTE
+
+1. Quais são os dois tipos de carga elétrica?
+2. O que acontece entre duas cargas positivas?
+3. O que representa o campo elétrico?
+4. Qual é a unidade de corrente elétrica?
+5. Uma carga de 60 C atravessa um fio em 12 segundos. Qual é a corrente?
+6. Um resistor de 15 ohms é atravessado por uma corrente de 2 A. Qual é a tensão?
+7. Um aparelho opera em 120 V e corrente de 4 A. Qual é sua potência?
+8. O que é indução eletromagnética?
+9. Por que as ondas eletromagnéticas conseguem se propagar no vácuo?
+10. Qual é o valor aproximado da velocidade da luz?
+11. O que significa a equação E = mc²?
+12. O que é dilatação do tempo?
+13. O que é um fóton?
+14. O que é o efeito fotoelétrico?
+15. O que significa dualidade onda-partícula?
+16. Quais partículas formam o átomo?
+17. Qual é a diferença entre fissão e fusão nuclear?
+18. Qual processo produz energia no Sol?
+19. Qual tipo de radiação possui maior poder de penetração?
+20. Explique por que uma pequena massa pode corresponder a uma grande quantidade de energia.
+
+20. DESAFIO FINAL
+
+Uma lâmpada elétrica de 60 W permanece ligada durante 5 horas por dia.
+
+Responda:
+
+a) Qual é o consumo diário em watt-hora?
+b) Qual é o consumo diário em quilowatt-hora?
+c) Qual será o consumo em 30 dias?
+d) Se cada quilowatt-hora custar R$ 0,90, qual será o custo mensal?
+e) Explique a diferença entre potência e energia elétrica.
+
+FIM DO TEXTO
