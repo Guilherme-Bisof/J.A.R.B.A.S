@@ -1,4 +1,4 @@
-# J.A.R.B.A.S. — Joint Autonomous Reasoning Brain and Advanced System
+# J.A.R.B.A.S. — Just A Rather Basic Artificial System
 
 ## About the project
 
