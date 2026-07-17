@@ -4,7 +4,7 @@
 
 A local-first full stack application that works as a **personal intelligence system**, unifying knowledge management, notes, memories, and documents into a single Vault with automatic classification powered by a local LLM.
 
-The project simulates the workflow of an intelligent personal assistant: the user stores different types of information, and the system uses a locally running LLM (Ollama) to categorize content, extract key facts, and create connections between items — building an interlinked knowledge web inspired by tools like Obsidian.
+The project simulates the workflow of an intelligent personal assistant: the user stores different types of information, and the system uses a locally running LLM (Ollama) to categorize content, extract key facts, and create connections between items, building an interlinked knowledge web inspired by tools like Obsidian.
 
 ## Features
 
