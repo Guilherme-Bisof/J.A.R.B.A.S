@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <div className="flex h-screen bg-j-bg text-j-text overflow-hidden">
-      {/* ── Sidebar ── */}
+      {/* Sidebar */}
       <aside
         className={`flex flex-col bg-j-surface border-r border-j-border flex-shrink-0
                     transition-[width] duration-200 ${collapsed ? "w-14" : "w-52"}`}

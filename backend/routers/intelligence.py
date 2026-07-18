@@ -27,14 +27,14 @@ async def process_item(item_id: str, session: Session = Depends(get_session)):
     if not item.content or len(item.content.strip()) < 10:
         raise HTTPException(status_code=400, detail="O texto é muito curto para ser processado.")
     
-    # 1. Enviar para a IA local (Ollama)
+    # Enviar para a IA local 
     ai_result = await process_knowledge_with_ollama(item.content)
     
-    # 2. Atualizar a Categoria do Documento
+    # Atualizar a Categoria do Documento
     new_cat_id = _sync_category(session, ai_result["category"])
     item.category_id = new_cat_id
     
-    # 3. Atualizar as Tags do Documento (Sem perder as antigas)
+    # Atualizar as Tags do Documento
     new_tags = ai_result["tags"]
     if new_tags:
         tags_str = ", ".join(new_tags)
@@ -43,12 +43,12 @@ async def process_item(item_id: str, session: Session = Depends(get_session)):
     session.commit()
     session.refresh(item)
     
-    # 4. Criar pílulas de Fatos (KnowledgeLink)
+    #  Criar pílulas de Fatos 
     # Sincroniza e vincula as tags
     _sync_tags(session, item, ai_result.get("tags", []))
     
     facts_created = 0
-    # Cria novas notas (child) baseadas nos fatos extraídos
+    # Cria novas notas  baseadas nos fatos extraídos
     for fact in ai_result.get("facts", []):
         fact_item = KnowledgeItem(
             title="Fato Extraído",

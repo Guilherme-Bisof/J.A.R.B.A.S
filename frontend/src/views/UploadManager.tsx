@@ -1,6 +1,5 @@
 import React, { useState, ChangeEvent } from "react";
 
-// Definimos a interface para garantir que o código fique "limpo"
 const UploadManager: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
   const [categoria, setCategoria] = useState<string>("estudo");

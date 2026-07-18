@@ -1,7 +1,6 @@
 import httpx
 import logging
 
-# Configuração simples de log para vermos o erro no terminal
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -11,7 +10,6 @@ class OllamaProvider:
         self.model = model
     
     def generate_chat_response(self, messages, system_prompt):
-        # 1. Limpeza básica do prompt (remover espaços extras)
         clean_prompt = system_prompt.strip()
         
         payload = {

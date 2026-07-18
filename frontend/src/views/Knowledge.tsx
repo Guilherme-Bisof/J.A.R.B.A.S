@@ -47,18 +47,18 @@ export default function KnowledgeView() {
   const [saving, setSaving] = useState(false);
   const [search, setSearch] = useState("");
 
-  // --- Estado do Visualizador ---
+  //  Estado do Visualizador 
   const [selectedItem, setSelectedItem] = useState<Knowledge | null>(null);
   const [itemLinks, setItemLinks] = useState<KnowledgeLink[]>([]);
   const [loadingLinks, setLoadingLinks] = useState(false);
 
-  // --- Estado de Inteligência ---
+  //  Estado de Inteligência 
   const [processingAI, setProcessingAI] = useState(false);
 
-  // --- Estado de Upload ---
+  //  Estado de Upload 
   const [uploading, setUploading] = useState(false);
 
-  // --- Estado do Analyzer e Relationship Engine ---
+  //  Estado do Analyzer e Relationship Engine 
   const [analyzerInput, setAnalyzerInput] = useState("");
   const [analyzerAnswer, setAnalyzerAnswer] = useState("");
   const [analyzing, setAnalyzing] = useState(false);
@@ -71,7 +71,7 @@ export default function KnowledgeView() {
     });
   }, []);
 
-  // --- Funções de CRUD ---
+  //  Funções de CRUD 
   const openCreate = () => {
     setEditId(null);
     setDraft(EMPTY_DRAFT);
@@ -119,7 +119,7 @@ export default function KnowledgeView() {
     if (selectedItem?.id === id) setSelectedItem(null);
   };
 
-  // --- Upload de Documento ---
+  //  Upload de Documento 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files?.length) return;
     setUploading(true);
@@ -134,22 +134,22 @@ export default function KnowledgeView() {
     }
   };
 
-  // --- Processamento Local de Inteligência ---
+  //  Processamento Local de Inteligência 
   const handleProcessAI = async () => {
     if (!selectedItem) return;
     setProcessingAI(true);
     try {
       const res = await intelligenceAPI.process(selectedItem.id);
       
-      // Atualizar o item local com a nova categoria e tags
+      // Atualiza o item local com a nova categoria e tags
       setSelectedItem(res.data.item);
       store.upsertKnowledge(res.data.item);
       
-      // Recarregar o cofre inteiro para puxar os novos Fatos criados pelo J.A.R.B.A.S.
+      // Recarrega o cofre inteiro para puxar os novos Fatos criados pelo J.A.R.B.A.S.
       const vaultRes = await vaultAPI.getAll();
       store.setKnowledge(vaultRes.data);
       
-      // Recarregar os links para mostrar os novos fatos criados no painel
+      // Recarrega os links para mostrar os novos fatos criados no painel
       const linksRes = await linksAPI.getLinks(selectedItem.id);
       setItemLinks(linksRes.data);
       
@@ -161,7 +161,7 @@ export default function KnowledgeView() {
     }
   };
 
-  // --- Knowledge Analyzer ---
+  //  Knowledge Analyzer 
   const handleAnalyze = async () => {
     if (!selectedItem || !analyzerInput.trim()) return;
     setAnalyzing(true);
@@ -176,7 +176,7 @@ export default function KnowledgeView() {
     }
   };
 
-  // --- Funções do Visualizador ---
+  //  Funções do Visualizador 
   const openViewer = async (k: Knowledge) => {
     setSelectedItem(k);
     setShowForm(false);
@@ -191,7 +191,7 @@ export default function KnowledgeView() {
     }
   };
 
-  // --- Filtragem ---
+  //  Filtragem 
   const filtered = store.knowledge.filter((k) => {
     if (!search) return true;
     const s = search.toLowerCase();
@@ -203,7 +203,7 @@ export default function KnowledgeView() {
     );
   });
 
-  // --- Renderização de Tags como badges ---
+  //  Renderização de Tags como badges 
   const renderTags = (tagsStr: string) => {
     if (!tagsStr) return null;
     const tagList = tagsStr.split(",").map((t) => t.trim()).filter(Boolean);
@@ -222,7 +222,7 @@ export default function KnowledgeView() {
     );
   };
 
-  // --- Tipo badge ---
+  //  Tipo badge 
   const typeBadge = (type: string) => {
     const map: Record<string, { color: string; label: string }> = {
       note: { color: "text-blue-400 bg-blue-500/15 border-blue-500/20", label: "Nota" },
@@ -238,7 +238,7 @@ export default function KnowledgeView() {
     );
   };
 
-  // ===================== VISUALIZADOR DE CONTEÚDO =====================
+  //  Visualizador de Conteúdo  
   if (selectedItem) {
     return (
       <div className="h-full flex flex-col p-6 overflow-y-auto animate-fade-in">
@@ -310,7 +310,7 @@ export default function KnowledgeView() {
           )}
         </div>
 
-        {/* Conteúdo Principal */}
+        {/* Conteúdo  */}
         <div className="bg-j-card border border-j-border rounded-xl p-6 mb-4 flex-1">
           <h2 className="text-xs font-semibold text-j-muted uppercase tracking-wider mb-3">Conteúdo</h2>
           <div className="text-sm text-j-text leading-relaxed whitespace-pre-wrap">
@@ -355,7 +355,7 @@ export default function KnowledgeView() {
           )}
         </div>
 
-        {/* --- Knowledge Analyzer (Ollama) --- */}
+        {/*  Knowledge Analyzer (Ollama)  */}
         <div className="bg-j-card border border-j-border rounded-xl p-5 mb-8">
           <h2 className="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-4 flex items-center gap-1.5">
             <MessageSquare className="w-4 h-4" /> Knowledge Analyzer
@@ -404,10 +404,10 @@ export default function KnowledgeView() {
     );
   }
 
-  // ===================== LISTA / GRID =====================
+  //  LISTA / GRID  
   return (
     <div className="h-full flex flex-col p-6 overflow-y-auto">
-      {/* Cabeçalho */}
+      {/* Header */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-xl font-bold text-white flex items-center gap-2">

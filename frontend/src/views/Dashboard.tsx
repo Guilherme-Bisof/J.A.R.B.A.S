@@ -22,7 +22,7 @@ import { formatDistanceToNow } from "date-fns";
 export default function Dashboard() {
   const nav = useNavigate();
 
-  // ─── Estados para armazenar os dados de cada módulo ───
+  //  Estados para armazenar os dados de cada módulo 
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [notes, setNotes] = useState<Note[]>([]);
   const [memories, setMemories] = useState<Memory[]>([]);
@@ -30,10 +30,10 @@ export default function Dashboard() {
   const [knowledge, setKnowledge] = useState<Knowledge[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // ─── Busca inicial unificada e Blindada ───
+  //  Busca inicial unificada e Blindada 
   useEffect(() => {
-    // Promise.all executa todas as requisições juntas.
-    // O .catch() garante que, se o backend estiver desligado, ele retorne um objeto vazio sem quebrar o app.
+    //  executa todas as requisições juntas.
+    //  garante que, se o backend estiver desligado, ele retorne um objeto vazio sem quebrar o app.
     Promise.all([
       chatAPI.getConversations().catch(() => ({ data: [] })),
       notesAPI.getAll().catch(() => ({ data: [] })),
@@ -42,8 +42,8 @@ export default function Dashboard() {
       knowledgeAPI.getAll().catch(() => ({ data: [] })),
     ])
       .then(([c, n, m, p, k]) => {
-        // Programação Defensiva: Valida se o que o backend mandou é realmente uma Lista (Array)
-        // Evita o erro "map is not a function" caso venha um HTML de erro (String)
+        //  Valida se o que o backend mandou é realmente uma Lista (Array)
+        //  Evita o erro "map is not a function" caso venha um HTML de erro (String)
         const safeConversations = Array.isArray(c.data) ? c.data : [];
         const safeNotes = Array.isArray(n.data) ? n.data : [];
         const safeMemories = Array.isArray(m.data) ? m.data : [];
@@ -66,7 +66,7 @@ export default function Dashboard() {
 
   return (
     <div className="h-full overflow-y-auto p-6 max-w-6xl mx-auto">
-      {/* ── Cabeçalho ── */}
+      {/* Cabeçalho  */}
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-2">
           <div className="w-1.5 h-1.5 bg-j-emerald rounded-full animate-pulse" />
@@ -80,7 +80,7 @@ export default function Dashboard() {
         </p>
       </div>
 
-      {/* ── Cartões de Estatísticas ── */}
+      {/* Cartões de Estatísticas  */}
       <div className="grid grid-cols-5 gap-4 mb-6">
         {[
           {
@@ -136,7 +136,7 @@ export default function Dashboard() {
         ))}
       </div>
 
-      {/* ── Grade Principal de Painéis ── */}
+      {/* Grade Principal de Painéis  */}
       <div className="grid grid-cols-2 gap-4">
         <Panel
           title="Projetos Ativos"
@@ -260,7 +260,7 @@ export default function Dashboard() {
   );
 }
 
-/* ── Sub-componentes Reutilizáveis ── */
+/* Sub-componentes Reutilizáveis  */
 
 function Panel({
   title,

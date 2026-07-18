@@ -23,7 +23,6 @@ const CAT_STYLE: Record<string, string> = {
   general: "text-j-muted  bg-j-hover      border-j-border",
 };
 
-// Atualizado para refletir a nova estrutura do backend Supreme
 type DraftMemory = Pick<
   Memory,
   "title" | "content" | "category" | "tags" | "importance" | "project_id"
@@ -103,7 +102,7 @@ export default function MemoryView() {
 
   return (
     <div className="h-full flex flex-col p-6 overflow-y-auto">
-      {/* ── Cabeçalho ── */}
+      {/*  Header  */}
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-xl font-bold text-white flex items-center gap-2">
@@ -126,7 +125,7 @@ export default function MemoryView() {
         </button>
       </div>
 
-      {/* ── Filtro de Categorias ── */}
+      {/*  Filtro de Categorias  */}
       <div className="flex gap-1.5 flex-wrap mb-5">
         {CATS.map((c) => (
           <button
@@ -143,7 +142,7 @@ export default function MemoryView() {
         ))}
       </div>
 
-      {/* ── Formulário de Criação / Edição ── */}
+      {/*  Formulário de Criação / Edição  */}
       {showForm && (
         <div className="bg-j-card border border-j-border rounded-xl p-5 mb-5 animate-fade-in">
           <div className="flex items-center justify-between mb-4">
@@ -255,7 +254,7 @@ export default function MemoryView() {
         </div>
       )}
 
-      {/* ── Grade de Memórias ── */}
+      {/*  Grade de Memórias  */}
       {loading ? (
         <div className="grid grid-cols-2 gap-3">
           {[1, 2, 3, 4].map((i) => (

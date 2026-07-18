@@ -7,7 +7,7 @@ import uuid
 def new_id() -> str:
     return str(uuid.uuid4())
 
-# ─── Projetos (Organização Superior) ──────────────────────────────────────────
+#  Projetos
 class Project(SQLModel, table=True):
     id: str = Field(default_factory=new_id, primary_key=True)
     name: str = Field(index=True)
@@ -23,37 +23,35 @@ class ProjectRead(SQLModel):
     status: str
     created_at: datetime
 
-# ─── KnowledgeItem (O Cofre Universal - FASE 1) ───────────────────────────────
-# Esta é a nova super tabela. Ela substitui Memory, Note, Document e Knowledge.
+#  O Cofre Universal 
 class KnowledgeItem(SQLModel, table=True):
     id: str = Field(default_factory=new_id, primary_key=True)
     title: str = Field(index=True)
     content: str = "" # Serve para o texto da nota, da memória ou o texto extraído do PDF
     
-    # 1. Tipagem e Classificação (O Segredo da Unificação)
+    #  Tipagem e Classificação 
     item_type: str = Field(index=True) # Tipos suportados: "memory", "note", "document", "fact"
     category_id: Optional[str] = Field(default=None, foreign_key="category.id")
-    # O campo "tags" original foi removido em favor do sistema relacional (FASE 1 - Item 2)
     
-    # 2. Metadados Específicos (Herdados das antigas tabelas)
+    #  Metadados Específicos 
     source: str = "manual" # Se for documento, guardamos o filepath aqui (ex: vault/documents/file.pdf). 
     importance: int = 5    # Herdado de Memory (escala de 1-10)
     
-    # 3. Relacionamentos
+    #  Relacionamentos
     project_id: Optional[str] = Field(default=None, foreign_key="project.id")
     
-    # 4. Auditoria de Tempo
+    #  Auditoria de Tempo
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
-# ─── Categorias (Sistema Relacional - FASE 1 Item 3) ──────────────────────────
+#  Categorias 
 class Category(SQLModel, table=True):
     id: str = Field(default_factory=new_id, primary_key=True)
     name: str = Field(index=True, unique=True)
     color: str = "#4B5563"
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
-# ─── Tags (Sistema Relacional - FASE 1 Item 2) ────────────────────────────────
+#  Tags
 class Tag(SQLModel, table=True):
     id: str = Field(default_factory=new_id, primary_key=True)
     name: str = Field(index=True, unique=True)
@@ -65,8 +63,7 @@ class KnowledgeTagLink(SQLModel, table=True):
     tag_id: str = Field(foreign_key="tag.id", primary_key=True)
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
-# ─── KnowledgeLink (Sistema de Links estilo Obsidian - FASE 1) ────────────────
-# Esta tabela permite ligar um KnowledgeItem a outro (Ex: "Albert Einstein" -> "Física")
+#  Sistema de Links estilo Obsidian 
 class KnowledgeLink(SQLModel, table=True):
     id: str = Field(default_factory=new_id, primary_key=True)
     from_id: str = Field(foreign_key="knowledgeitem.id", index=True)
@@ -74,7 +71,7 @@ class KnowledgeLink(SQLModel, table=True):
     link_type: str = "reference" # Tipos: related, child, parent, reference
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
-# ─── Chat / Interação (Mantido da V1) ─────────────────────────────────────────
+#  Chat 
 class Conversation(SQLModel, table=True):
     id: str = Field(default_factory=new_id, primary_key=True)
     title: str = "New Conversation"

@@ -28,7 +28,7 @@ export default function Chat() {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const recRef = useRef<any>(null);
 
-  // Load conversations on mount
+  // Carrega conversas ao montar
   useEffect(() => {
     chatAPI.getConversations().then((r) => {
       store.setConversations(r.data);
@@ -36,7 +36,7 @@ export default function Chat() {
     });
   }, []);
 
-  // Load messages when active conversation changes
+  // Carrega mensagens quando a conversa ativa muda
   useEffect(() => {
     if (!store.activeConvId) return;
     setLoadingMsgs(true);
@@ -74,7 +74,7 @@ export default function Chat() {
       const r = await chatAPI.send(store.activeConvId, text);
       store.pushMessage(r.data.user_message);
       store.pushMessage(r.data.assistant_message);
-      // Update conversation title in sidebar
+      // Atualiza o título da conversa na barra lateral
       store.updateConversation({
         ...store.conversations.find((c) => c.id === store.activeConvId)!,
         title:
@@ -137,7 +137,7 @@ export default function Chat() {
 
   return (
     <div className="flex h-full">
-      {/* ── Conversations sidebar ── */}
+      {/*  Barra lateral  */}
       <div className="w-56 flex-shrink-0 bg-j-surface border-r border-j-border flex flex-col">
         <div className="p-3 border-b border-j-border">
           <button
@@ -188,7 +188,7 @@ export default function Chat() {
         </div>
       </div>
 
-      {/* ── Chat area ── */}
+      {/*  Chat area  */}
       <div className="flex-1 flex flex-col min-w-0">
         {!store.activeConvId ? (
           <div className="flex-1 flex flex-col items-center justify-center gap-4 text-center p-8">
@@ -217,7 +217,7 @@ export default function Chat() {
           </div>
         ) : (
           <>
-            {/* Messages */}
+            {/* Mensagens */}
             <div className="flex-1 overflow-y-auto p-6 space-y-5">
               {loadingMsgs ? (
                 <div className="flex justify-center py-12">
@@ -246,7 +246,7 @@ export default function Chat() {
               <div ref={bottomRef} />
             </div>
 
-            {/* Input bar */}
+            {/* Input */}
             <div className="p-4 border-t border-j-border">
               <div className="flex gap-2 items-end bg-j-card border border-j-border rounded-xl p-2">
                 <textarea
@@ -285,7 +285,7 @@ export default function Chat() {
                     )}
                   </button>
 
-                  {/* Voice input */}
+                  {/* Input por voz */}
                   <button
                     onClick={toggleVoice}
                     title={listening ? "Stop listening" : "Voice input"}
@@ -302,7 +302,7 @@ export default function Chat() {
                     )}
                   </button>
 
-                  {/* Send */}
+                  {/* Enviar */}
                   <button
                     onClick={send}
                     disabled={!input.trim() || store.isTyping}

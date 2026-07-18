@@ -128,10 +128,10 @@ def get_vault_item(item_id: str, session: Session = Depends(get_session)):
 
 @router.post("/", response_model=VaultItemRead)
 def create_vault_item(item_data: VaultItemCreate, session: Session = Depends(get_session)):
-    # 1. Encontrar ou criar a categoria
+    # Encontrar ou criar a categoria
     cat_id = _sync_category(session, item_data.category)
     
-    # 2. Criar item sem os campos extras
+    # Criar item sem os campos extras
     item_dict = item_data.model_dump(exclude={"tags", "category"})
     item = KnowledgeItem(**item_dict, category_id=cat_id)
     

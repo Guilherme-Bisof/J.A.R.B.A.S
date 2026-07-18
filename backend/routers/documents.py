@@ -11,7 +11,6 @@ from routers.vault import _sync_tags, _sync_category, _serialize
 
 router = APIRouter()
 
-# Pasta onde os arquivos originais ficam guardados
 VAULT_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "vault", "documents")
 os.makedirs(VAULT_DIR, exist_ok=True)
 

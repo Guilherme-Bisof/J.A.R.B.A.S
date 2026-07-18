@@ -9,7 +9,7 @@ import type {
 } from "../types";
 
 interface AppState {
-  // ─── Dados existentes ───
+  //  Dados existentes 
   conversations: Conversation[];
   activeConvId: string | null;
   messages: Message[];
@@ -20,7 +20,7 @@ interface AppState {
   projects: Project[];
   knowledge: Knowledge[];
 
-  // ─── Ações existentes ───
+  // Ações existentes 
   setConversations: (v: Conversation[]) => void;
   addConversation: (v: Conversation) => void;
   removeConversation: (id: string) => void;
@@ -55,9 +55,6 @@ export const useStore = create<AppState>((set) => ({
   projects: [],
   knowledge: [],
 
-  // ─── BLINDAGEM GLOBAL ───
-  // Usamos Array.isArray(v) ? v : [] para garantir que, se o backend falhar
-  // e enviar um texto/HTML, o sistema assumirá uma lista vazia, evitando a tela preta.
 
   setConversations: (v) => set({ conversations: Array.isArray(v) ? v : [] }),
   addConversation: (c) =>

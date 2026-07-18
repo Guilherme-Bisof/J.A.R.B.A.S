@@ -5,7 +5,6 @@ from sqlmodel import Session, select
 from pydantic import BaseModel
 
 from database import get_session
-# 1. IMPORTANTE: Agora importamos apenas a super tabela KnowledgeItem
 from models import Conversation, Message, KnowledgeItem 
 from config import SYSTEM_PROMPT, OLLAMA_BASE_URL, OLLAMA_MODEL
 from core.ai.provider import OllamaProvider
@@ -21,9 +20,6 @@ class SendResponse(BaseModel):
     user_message: dict
     assistant_message: dict
 
-# =====================================================================
-# PASSO 1: FUNÇÃO DE BUSCA (Adaptada para o KnowledgeItem)
-# =====================================================================
 def buscar_contexto_avancado(session: Session, pergunta: str) -> str:
     contexto_acumulado = ""
     pergunta_limpa = re.sub(r'[^\w\s]', '', pergunta)
@@ -32,7 +28,6 @@ def buscar_contexto_avancado(session: Session, pergunta: str) -> str:
     if not palavras_chave:
         return ""
 
-    # Fazemos uma ÚNICA busca no banco de dados para todos os tipos de itens!
     itens = session.exec(select(KnowledgeItem)).all()
     
     for item in itens:
@@ -52,9 +47,7 @@ def buscar_contexto_avancado(session: Session, pergunta: str) -> str:
 
     return contexto_acumulado
 
-# =====================================================================
-# PASSO 2: ROTAS DO CHAT 
-# =====================================================================
+#  ROTAS DO CHAT 
 
 @router.get("/conversations")
 def get_conversations(session: Session = Depends(get_session)):

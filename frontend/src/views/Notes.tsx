@@ -79,7 +79,7 @@ export default function Notes() {
 
   return (
     <div className="flex h-full">
-      {/* ── Note list sidebar ── */}
+      {/*  Note list sidebar  */}
       <div className="w-64 flex-shrink-0 bg-j-surface border-r border-j-border flex flex-col">
         <div className="p-3 space-y-2 border-b border-j-border">
           <button
@@ -161,7 +161,7 @@ export default function Notes() {
         </div>
       </div>
 
-      {/* ── Editor panel ── */}
+      {/*  Editor panel  */}
       <div className="flex-1 flex flex-col min-w-0">
         {!activeNote ? (
           <div className="flex-1 flex flex-col items-center justify-center gap-4 text-center p-8">

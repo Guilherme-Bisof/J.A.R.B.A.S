@@ -2,9 +2,9 @@ import httpx
 import json
 from typing import Dict, Any
 
-# Configuração Padrão do Modelo Ollama
+
 OLLAMA_URL = "http://localhost:11434/api/generate"
-DEFAULT_MODEL = "llama3:latest" # Usando o modelo que o usuário tem baixado
+DEFAULT_MODEL = "llama3:latest" 
 
 async def process_knowledge_with_ollama(text_content: str, model: str = DEFAULT_MODEL) -> Dict[str, Any]:
     """
@@ -12,8 +12,7 @@ async def process_knowledge_with_ollama(text_content: str, model: str = DEFAULT_
     estritamente em formato JSON contendo categoria, tags e fatos principais.
     """
     
-    # Truque para não estourar a VRAM do usuário:
-    # Pegamos no máximo os primeiros 4000 caracteres do texto
+
     truncated_content = text_content[:4000]
     
     system_prompt = """Você é o J.A.R.B.A.S., um motor de inteligência local projetado para ler textos e organizar o conhecimento.
@@ -82,7 +81,7 @@ async def analyze_knowledge_with_ollama(text_content: str, question: str, model:
     Retorna o texto em linguagem natural.
     """
     
-    # Truncar o contexto para evitar OOM, mas permitindo um pouco mais de espaço se possível
+    # Truncar o contexto para evitar OOM
     truncated_content = text_content[:6000]
     
     system_prompt = f"""Você é o Analisador de Conhecimento do J.A.R.B.A.S.

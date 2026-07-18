@@ -1,14 +1,9 @@
 from sqlmodel import SQLModel, create_engine, Session
 from config import DATABASE_URL
-# Importamos models aqui para garantir que o SQLModel "veja" as tabelas 
-# antes de tentar criá-las no banco de dados.
 import models 
 
-# Argumentos de conexão: 'check_same_thread' é necessário para o SQLite funcionar 
-# corretamente com o FastAPI, que é assíncrono e usa múltiplas threads.
 connect_args = {"check_same_thread": False} if "sqlite" in DATABASE_URL else {}
 
-# Cria o "motor" (engine) que vai se comunicar com o arquivo jarbas.db
 engine = create_engine(DATABASE_URL, connect_args=connect_args, echo=False)
 
 def create_db_and_tables() -> None:

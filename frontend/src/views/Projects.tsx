@@ -70,7 +70,7 @@ export default function Projects() {
 
   return (
     <div className="h-full flex flex-col p-6 overflow-y-auto">
-      {/* ── Cabeçalho ── */}
+      {/*  Header  */}
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-xl font-bold text-white flex items-center gap-2">
@@ -92,7 +92,7 @@ export default function Projects() {
         </button>
       </div>
 
-      {/* ── Formulário de Criação/Edição ── */}
+      {/*  Formulário de Criação/Edição  */}
       {showForm && (
         <div className="bg-j-card border border-j-border rounded-xl p-5 mb-5 animate-fade-in">
           <div className="flex items-center justify-between mb-4">
@@ -172,7 +172,7 @@ export default function Projects() {
         </div>
       )}
 
-      {/* ── Grid de Projetos ── */}
+      {/*  Grid de Projetos  */}
       {loading ? (
         <div className="grid grid-cols-2 gap-3">
           {[1, 2].map((i) => (
